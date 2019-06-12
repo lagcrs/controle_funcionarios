@@ -1,0 +1,6 @@
+CreateUsersTable: create table "users" ("id" integer not null primary key autoincrement, "name" varchar not null, "email" varchar not null, "email_verified_at" datetime null, "password" varchar not null, "remember_token" varchar null, "created_at" datetime null, "updated_at" datetime null)
+CreateUsersTable: create unique index "users_email_unique" on "users" ("email")
+CreatePasswordResetsTable: create table "password_resets" ("email" varchar not null, "token" varchar not null, "created_at" datetime null)
+CreatePasswordResetsTable: create index "password_resets_email_index" on "password_resets" ("email")
+CriarTabelaFuncionarios: create table "funcionarios" ("idFuncionario" integer not null primary key autoincrement, "nome" varchar not null, "sobrenome" varchar not null, "dataNascimento" date not null, "email" varchar not null, "telefone" varchar not null, "rua" varchar not null, "bairro" varchar not null, "cidade" varchar not null, "estado" varchar not null, "cep" varchar not null, "cargo_id_fk" integer not null, foreign key("cargo_id_fk") references "cargos"("idCargo"))
+CriarTabelaCargos: create table "cargos" ("idCargo" integer not null primary key autoincrement, "nome" varchar not null, "descricao" varchar not null, "salario" numeric not null)
