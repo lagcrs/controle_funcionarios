@@ -6,7 +6,6 @@ use App\Funcionario;
 use App\Cargo;
 use Illuminate\Http\Request;
 use App\Http\Requests\FuncionariosFormRequest;
-use App\Http\Controllers\DB;
 
 class FuncionariosController extends Controller{
 
